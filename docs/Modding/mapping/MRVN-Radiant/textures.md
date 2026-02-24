@@ -127,10 +127,6 @@ control over how textures appear in-game, and the visual quality may be lower.
 
 ---
 
-The **RPAK method** requires more setup, as it involves using [RePak](../../repak/map.md) and creating a JSON file to compile
-your textures into an `.rpak` file. While this method is more complex, it provides greater control over texture behavior and appearance.
-
-
 ## Common Problems
 
 - Applying a texture in MRVN using one path, but placing the material in a different one for titanfall 2.
