@@ -125,74 +125,11 @@ There are two main methods for loading textures into the game for use in your cu
 The **VMT method** is quicker and easier to set up, making it ideal for testing or simple projects. However, it offers limited
 control over how textures appear in-game, and the visual quality may be lower.
 
+---
+
 The **RPAK method** requires more setup, as it involves using [RePak](../../repak/map.md) and creating a JSON file to compile
 your textures into an `.rpak` file. While this method is more complex, it provides greater control over texture behavior and appearance.
 
----
-
-#### VMT Method
-
-The VMT method uses `.vmt` (Valve Material Type) and `.vtf` (Valve Texture Format) files to define and load materials. You will need to
-convert your `.dds` or other image texture file into a `.vtf`
-using [VTFEdit Reloaded](https://github.com/Sky-rym/VTFEdit-Reloaded/releases) or other tools. There are two main ways to use this method:
-
-1. **Using a `materials/` folder in your mod (recommended)**
-
-    The simplest approach is to create a `materials/` folder inside your mod folder.
-
-    ```
-    ExampleMod/mod/materials
-    ```
-    Place your `.vmt` and `.vtf` files there, following the correct folder structure that matches the paths used in MRVN.
-
-    Example folder structure:
-    ![VMT and VTF Folder Example](../../../_static/images/mrvn/textures/vmt_vtf_example_folder.jpg)
-
-2. **Using a VPK file**
-
-    Alternatively, you can package your `.vmt` and `.vtf` files into a `.vpk` (Valve Pak) file and have your mod load it at runtime.
-
-    Example VPK setup:
-    ![VMT, VTF, and VPK Example](../../../_static/images/mrvn/textures/vmt_vtf_vpk_example_folder.jpg)
-
----
-
-Here is an example of a simple `.vmt` file:
-
-```vmt
-LightmappedGeneric
-{
-    $basetexture "world/dev/generic_gray"
-    $surfaceprop "concrete"
-}
-```
-
-The `$basetexture` line defines the path to your `.vtf` texture file, relative to the `materials/` folder if you use method 1. In this
-example, it refers to `materials/world/dev/generic_gray.vtf`.
-
-
----
-
-#### RPAK Method
-
-The RPAK method involves using [RePak](../../repak/map.md) to compile your `.dds` texture files into material entries into a `.rpak` based
-on a JSON configuration.
-
-After generating the `.rpak` file make sure the `.rpak` is named the same as your bsp map file. This makes sure the `.rpak` loads properly
-with the map.
-Place the `.rpak` file(s) into the `pak/` folder within your mod directory. The game will automatically load them from there.
-
-Example folder layout:
-![RePak Folder Example](../../../_static/images/mrvn/textures/rpak_example_folder.jpg)
-
----
-
-##### Optional: Using `rpak.json` for Custom `.rpak` Load Behavior
-
-You can optionally include an `rpak.json` file in your `pak/` folder to control how your RPAK files are handled by the game.
-This allows you to specify preload and postload behavior, or set up aliases for existing RPAK files.
-
-For more details, see the [RPAK Modding Guide](../../guides/tools/rpakmodding.md).
 
 ## Common Problems
 
