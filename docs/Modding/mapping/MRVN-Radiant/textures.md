@@ -125,6 +125,8 @@ There are two main methods for loading textures into the game for use in your cu
 The **VMT method** is quicker and easier to set up, making it ideal for testing or simple projects. However, it offers limited
 control over how textures appear in-game, and the visual quality may be lower.
 
+The **RPAK method** requires more setup, as it involves using [RePak](../../repak/map.md) and creating a JSON file to compile your textures into an `.rpak` file. While this method is more complex, it provides greater control over texture behavior and appearance.
+
 ---
 
 ## Common Problems
