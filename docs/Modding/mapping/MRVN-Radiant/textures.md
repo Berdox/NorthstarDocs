@@ -1,5 +1,6 @@
 # Textures
 
+## Introduction
 MRVN Radiant is a brush-based level editor used for creating custom maps for Titanfall 2. In MRVN, most surfaces such as floors,
 walls, and ceilings are made up of brushes. These brushes are textured using image files mapped onto their surfaces.
 
@@ -20,7 +21,9 @@ First, create a folder for your custom assets. The simplest structure looks like
 
 ```
 <your_custom_folder>/
-└── textures/
+├── textures/
+├── model/
+└── shaders/
 ```
 
 MRVN looks for textures inside the `textures/` folder, so this folder is required.
@@ -36,12 +39,13 @@ A more complete structure may look like:
 │   │   └── floor/    # Floor textures
 │   ├── model/        # Model-specific textures (not commonly used)
 │   └── skybox/       # Skybox textures (currently not implemented in MRVN)
-└── model/            # 3D models (OBJ or mdl format) used in MRVN
+├── model/            # 3D models (OBJ or mdl format) used in MRVN
+└── shaders/          # Shader definitions for MRVN to compile into Map (Used for rpak)
 ```
 
 It is strongly recommend downloading the [MRVN Resource Pack](https://github.com/MRVN-Radiant/MRVN-Resource-Pack).
-The pack includes helpful assets such as spawnpoint models, other entity models, and utility textures commonly used in Source Engine
-and Titanfall development. It also provides a reference for proper folder structure.
+The pack includes helpful assets such as spawnpoint models, other entity models and definitions, and utility textures commonly used in Source Engine and Titanfall development.
+It also provides a reference for proper folder structure.
 
 ---
 
@@ -125,7 +129,7 @@ There are two main methods for loading textures into the game for use in your cu
 The **VMT method** is quicker and easier to set up, making it ideal for testing or simple projects. However, it offers limited
 control over how textures appear in-game, and the visual quality may be lower.
 
-The **RPAK method** requires more setup, as it involves using [RePak](../../repak/map.md) and creating a JSON file to compile your textures into an `.rpak` file. While this method is more complex, it provides greater control over texture behavior and appearance.
+The **RPAK method** requires more setup, as it involves using [RePak](../../repak/map.md) and creating a JSON file to compile your textures into an `.rpak` file. While this method is more complex, it provides greater control over texture behavior and appearance. [Here](../../repak/assets/) to learn more about `.rpak` and Repak. To use textures and materials with `.rpak` you need to have [shader definition](./shaders.md) for each texture used in the map. MRVN will compile the textures info using the shader definition into the map, making the engine be able to find the materials in `.rpak`.
 
 ---
 
