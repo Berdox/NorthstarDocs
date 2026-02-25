@@ -10,7 +10,7 @@ Shader files are stored in the shaders directory, where the textures for the sha
 ![Folder Path Image](../../../_static/images/mrvn/textures/folder_example.jpg)
 
 #### Example
-A simple shader defintion for a texture
+A simple shader definition for a texture
 ```
 textures/world/dev/generic_grey
 {
