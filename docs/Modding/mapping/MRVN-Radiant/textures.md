@@ -129,7 +129,7 @@ There are two main methods for loading textures into the game for use in your cu
 The **VMT method** is quicker and easier to set up, making it ideal for testing or simple projects. However, it offers limited
 control over how textures appear in-game, and the visual quality may be lower.
 
-The **RPAK method** requires more setup, as it involves using [RePak](../../repak/index.md) and creating a JSON file to compile your textures into an `.rpak` file. While this method is more complex, it provides greater control over texture behavior and appearance. [Here](../../repak/assets/index.md) to learn more about `.rpak` and Repak. To use textures and materials with `.rpak` you need to have [shader definition](./shaders.md) for each texture used in the map. MRVN will compile the textures info using the shader definition into the map, making the engine be able to find the materials in `.rpak`.
+The **RPAK method** requires more setup, as it involves using [RePak](../../repak/index.md) and creating a JSON map file to compile your textures into an `.rpak` file. While this method is more complex, it provides greater control over texture behavior and appearance. [Here](../../repak/assets/index.md) to learn more about `.rpak` and Repak. To use textures and materials with `.rpak` you need to have a [shader definition](./shaders.md) for each texture used in the map. MRVN will compile the texture info using the shader definition into the map, making the engine be able to find the materials in `.rpak`.
 
 ---
 
